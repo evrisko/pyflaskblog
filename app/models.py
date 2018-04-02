@@ -4,7 +4,7 @@ import re
 
 def slugify(s):
     pattern = r'[^\w+]'
-    return re.sub(pattern, '-', s)
+    return re.sub(pattern, '-', str(s))
 
 post_tags = db.Table('post_tags',
                     db.Column('post_id', db.Integer, db.ForeignKey('post.id')),
@@ -43,4 +43,4 @@ class Tag(db.Model):
         self.slug = slugify(self.name)
 
     def __repr__(self):
-        return '<Tag id: {}, name: {}>'.format(self.id, self.name)
+        return '{}'.format(self.name)
