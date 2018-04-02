@@ -5,7 +5,7 @@ cd flask
 mkdir app
 virtualenv venv
 source venv/bin/activate
-pip3 install flask flask-script flask-migrate flask-sqlalchemy mysql-connector
+pip3 install flask flask-script flask-migrate flask-sqlalchemy mysql-connector wtforms
 mysql -u root -p
 create database blog character set utf8 collate utf8_unicode_ci;
 
