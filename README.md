@@ -16,3 +16,5 @@ create database blog character set utf8 collate utf8_unicode_ci;
 python3 migrate.py db init
 python3 migrate.py db migrate
 python3 migrate.py db upgrade
+
+Test
