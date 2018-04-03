@@ -20,3 +20,6 @@ python3 manage.py db upgrade
 pip freeze > requirement.txt
   Install requirement
 pip install -r requirement.txt
+
+chmod a+x main.py
+./main.py
