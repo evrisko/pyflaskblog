@@ -1,11 +1,13 @@
   Preparation:
 sudo apt install virtualenv python3-pip mysql-server
+pip install --upgrade virtualenv
 mkdir flask
 cd flask
 mkdir app
-virtualenv venv
+virtualenv -p python3 venv
 source venv/bin/activate
-pip3 install flask flask-script flask-migrate flask-sqlalchemy mysql-connector wtforms flask-admin
+pip install flask flask-script flask-migrate flask-sqlalchemy mysql-connector wtforms flask-admin flask-security
+(pip install -r requirement.txt)
 mysql -u root -p
 create database blog character set utf8 collate utf8_unicode_ci;
 
@@ -13,3 +15,8 @@ create database blog character set utf8 collate utf8_unicode_ci;
 python3 manage.py db init
 python3 manage.py db migrate
 python3 manage.py db upgrade
+
+  Create requirement
+pip freeze > requirement.txt
+  Install requirement
+pip install -r requirement.txt
